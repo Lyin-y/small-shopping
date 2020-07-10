@@ -1,0 +1,79 @@
+/* pages/login/login.wxss */
+.wrap{
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  height: 100vh;
+  background-color: white;
+  align-items: center;
+}
+.logo{
+   margin-top: 16rpx;
+  display: flex;
+  flex-direction: column;
+  width: 96%;
+  align-items: center;
+  margin-left: 10rpx;
+  padding-top: 20rpx;
+  padding-bottom: 20rpx;
+  background-color: pink;
+  border-top-left-radius: 20rpx;
+  border-top-right-radius: 20rpx;
+  /* border-bottom:1px solid gainsboro; */
+}
+.logo image{
+  width: 200rpx;
+  height: 200rpx;
+  border-radius: 30rpx;
+}
+.login{
+  margin-left: 10rpx;
+  width:96%;
+  margin-top:20rpx;
+  background-color: pink;
+   border-bottom-left-radius: 20rpx;
+  border-bottom-right-radius: 20rpx;
+  padding-bottom: 15rpx;
+}
+.login form{
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+}
+form .username,.pwd{
+  display: flex;
+  flex-direction: row;
+  align-items: center;    /*x轴居中*/
+  width: 100%; 
+  height: 100rpx;
+   border-bottom:1px solid gainsboro;
+   font-size: 28rpx;
+   padding-left: 20rpx;
+}
+form .username input{
+  margin-left: 20rpx;
+  flex: 7;
+}
+form .pwd input{
+   margin-left: 20rpx;
+   flex: 7;
+}
+form label{
+  flex: 2;
+}
+button{
+  margin-top: 20rpx;
+  color: white; 
+  height: 100rpx;
+  width: 96%;
+  line-height: 100rpx;
+  background-color:  burlywood;
+}
+.errMsg{
+  display: block;
+  width: 100%;
+  text-align: center;
+  margin-top: 12rpx;
+  font-size: 20rpx;
+  color: red;
+}

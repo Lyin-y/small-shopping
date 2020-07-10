@@ -1,0 +1,92 @@
+<!--pages/detail/detail.wxml-->
+<!--商品幻灯片-->
+<swiper indicator-dots="true" autoplay 
+interval="5000" class="banner" duration="1000" circular="1000">
+	<block wx:for="{{goods_img}}" wx:key="goods_info" id="{{item.id}}">
+		<swiper-item>
+			<image src="{{imghref}}{{item.img}}" class="slide-image" mode="aspectFill" data-src='{{imghref}}{{item.img}}' bindtap="previewImage" />
+		</swiper-item>
+	</block>
+</swiper>
+<!--商品幻灯片 end-->
+<view class="info-price clear">
+	<view class='price'>￥{{goods_info.goods_price}} </view>
+	<view class='fenxiang'>
+		<button class='fxbtn' open-type="share">
+			<!-- <view style='height:20px;margin-top:8px;'>
+				<image src='/img/fenxiang.png' mode="aspectFill"></image>
+			</view> -->
+			<view>分享</view>
+		</button>
+	</view>
+</view>
+<view class="info-title">
+	<text>{{goods_info.goods_title}}</text>
+</view>
+
+<view style="border-top:1px solid #F6F6F6;background: #fff; padding:5px 15px;">
+	<view class="clearfix flex grey gridXt">
+		<text class="sub"><block wx:if='{{goods_info.goods_yunfei==0.00}}'>运费：包邮</block><block wx:else>运费：{{goods_info.goods_yunfei}}</block></text>
+		<text class="sub">库存：{{goods_info.goods_kucun}}</text>
+		<text class="sub">销量：{{goods_info.goods_xiaoliang}}</text>
+	</view>
+</view>
+<block wx:if="{{pjDataList!=''}}">
+	<!--评价-->
+	<view class='pj_box'>
+		<view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+			<view style='float:left;'>商品评价</view>
+			<!-- <view style='float:right;margin-left:2px;margin-top:-1px;'>
+				<image src="/img/ico_jt.png" class="ico_img_jt"></image>
+			</view> -->
+			<view style='float:right;font-size:12px;color:#A2A2A2;'>
+				<navigator url="pjList?id={{goods_id}}">查看全部</navigator>
+			</view>
+			<view class='clear'></view>
+		</view>
+		<block wx:for="{{pjDataList}}" wx:for-item="item" wx:key="pj">
+			<view class="list_item">
+				<view class='pj_u_info clear'>
+					<view class='header_img'>
+						<image src="{{item.headpic}}" mode="aspectFit"></image>
+					</view>
+					<view class='name'>{{item.author}}</view>
+					<view class='time'>{{item.add_time}}</view>
+				</view>
+				<view class='pj_cont'>
+					{{item.content}}
+				</view>
+			</view>
+		</block>
+	</view>
+</block>
+<!--商品详情-->
+<view class='details_box'>
+	<view style="height:40px;line-height: 40px;border-bottom:1px solid #f5f5f5;">
+		<view>商品详情</view>
+	</view>
+	<view style='padding:10px 0px;'>
+		<view class="wxParse">
+			{{goods_info.content}}
+		</view>
+	</view>
+</view>
+
+<!--底部浮动 start-->
+<view class="foot-nav">
+	  <view class="dianpu">
+		   <image src="cloud://xly-oilad.786c-xly-oilad-1301571521/navList/店铺 (1).png" mode="widthFix"></image>
+		   <text>店铺</text>
+	  </view>
+    <view class="dianpu">
+		   <image src="cloud://xly-oilad.786c-xly-oilad-1301571521/navList/收藏.png" mode="widthFix" ></image>
+		   <text>收藏</text>
+	  </view>
+    <view class="dianpu" bindtap="addCart">
+		   <image src="cloud://xly-oilad.786c-xly-oilad-1301571521/navList/gouwucheman.png" mode="widthFix"></image>
+		   <text>购物车</text>
+	  </view>
+    <view class="goumai">
+    <button>立即购买</button>
+    </view>
+</view>

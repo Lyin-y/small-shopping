@@ -1,0 +1,52 @@
+<!--pages/collect/collect.wxml-->
+<!--收藏-1行2列：左侧图片，右侧3行文本--> 
+<view class='text'>
+  <view class='line_y'></view>
+  <text>我的收藏列表</text>
+</view>
+
+<navigator url='/pages/fenlei/yemian/01-xiangxi'>
+  <view class='paihang'>
+    <image class="paihang-img"  src='cloud://xly-oilad.786c-xly-oilad-1301571521/眉笔/眉笔2.jpg' />
+    <view class='two-line-text'>
+      <text class='txt1'>销售排行产品名称01</text>
+      <text class="txt2">小巧可爱（眉笔）化妆品</text>
+      <text class="txt2">¥168</text>
+    </view>
+  </view>
+</navigator>  
+
+<navigator url=''>
+  <view class='paihang'>
+    <image class="paihang-img" src='cloud://xly-oilad.786c-xly-oilad-1301571521/productList/0a3e9ac3fc72af0fbc07914fcd25fb8.jpg' />
+    <view class='two-line-text'>
+      <text class='txt1'>我的收藏产品01</text>
+      <text class="txt2">（包包）装饰品</text>
+      <text class="txt2">¥258.00</text>
+    </view>
+  </view>
+</navigator>  
+
+
+<navigator url=''>
+  <view class='paihang'>
+    <image class="paihang-img" src='cloud://xly-oilad.786c-xly-oilad-1301571521/productList/0c2c54efae7a18695f3bd29504f906f.jpg' />
+    <view class='two-line-text'>
+      <text class='txt1'>我的收藏产品02</text>
+      <text class="txt2">（包包）装饰品 </text>
+      <text class="txt2">¥368.00</text>
+    </view>
+  </view>
+</navigator>  
+
+<navigator url='/pages/fenlei/yemian/01-xiangxi'>
+  <view class='paihang'>
+    <image class="paihang-img" src='cloud://xly-oilad.786c-xly-oilad-1301571521/productList/1ed82b09627d2fff3b7a2f7daa733f6.jpg' />
+    <view class='two-line-text'>
+      <text class='txt1'>自然堂雪域精粹系列</text>
+      <text class="txt2">Beling Beling眼影盘 </text>
+      <text class="txt2">¥：155.00</text>
+    </view>
+  </view>
+</navigator>  
+

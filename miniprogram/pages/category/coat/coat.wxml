@@ -1,0 +1,45 @@
+<!--pages/coat/coat.wxml-->
+<!-- 左列表 -->
+<view class="zon01">
+  <view wx:for="{{shuju01}}" wx:key="item" class="l">
+   <view class="tu" bindtap="toXianqin" hover-class="item-hover" data-id="{{item.id}}" data-image="{{item.image}}" data-title="{{item.title}}" data-price="{{item.price}}"> 
+    <!-- <navigator url="/pages/xianqin/xianqin?data-id={{item.id}}data-title={{item.title}}data-image={{item.image}}data-price={{item.price}}"> -->
+    <!-- <view class="tu"> -->
+      <image src="{{item.image}}" />
+    </view>
+   <!-- </navigator> -->
+    <view class="title">
+      <text>{{item.title}}</text>
+    </view>
+    <view class="word">
+      <view class="left">
+        <text>{{item.price}}</text>
+      </view>
+      <view class="right">
+        <view bindtap="addper">
+          <image src="../images/aixin.png" />
+        </view>
+      </view>
+    </view>
+  </view>
+</view>
+<!-- 右列表 -->
+<view class="zon02">
+  <view class="l" wx:for="{{shuju02}}" wx:key="item">
+    <view class="tu" bindtap="toXianqin" hover-class="item-hover" data-id="{{item.id}}" data-image="{{item.image}}" data-title="{{item.title}}" data-price="{{item.price}}">
+      <image src="{{item.image}}" />
+    </view>
+
+    <view class="title">
+      <text>{{item.title}}</text>
+    </view>
+    <view class="word">
+      <view class="left">
+        <text>{{item.price}}</text>
+      </view>
+      <view class="right">
+        <image src="../images/aixin.png" />
+      </view>
+    </view>
+  </view>
+</view>

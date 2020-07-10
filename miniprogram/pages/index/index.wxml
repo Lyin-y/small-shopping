@@ -1,0 +1,29 @@
+<!--pages/index/index.wxml-->
+<view class="container">
+  <!-- 轮播图 -->
+  <swiper autoplay="true" circular="true" indicator-dots="true">
+    <swiper-item wx:for="{{banner}}" wx:key="keys">
+      <navigator url="{{item.url}}">
+      <image src="{{item.src}}" model="widthFix"></image>
+      </navigator>
+    </swiper-item>
+  </swiper>
+  <!-- 导航菜单 -->
+  <view class="nav">
+    <view class="menu" wx:for="{{navList}}" wx:key="keys">
+      <text>{{item.title}}</text>
+      <image src="{{item.src}}"></image>
+    </view>
+  </view> 
+</view>
+<!-- 产品列表 -->
+<text class="hot">热卖</text>
+<view class="wrap">
+  <navigator url="/pages/detail/detail?_id={{item.id}}" class="product" wx:for="{{productAll}}" wx:key="keys">
+    <image src="{{ item.src }}" model="widthFix"></image>
+    <view class="info">
+      <text class="name">{{ item.name }}</text>
+      <text class="price">￥{{ item.price }}</text>
+    </view>
+  </navigator>
+</view>

@@ -1,0 +1,68 @@
+<!--pages/category/category.wxml-->
+<!-- 顶部文字 -->
+<view class="tap">
+  <text>Category</text>
+</view>
+
+<!-- 第一排分类 -->
+<view class="row01">
+<view class="coat">
+<navigator url="/pages/category/coat/coat">
+  <image src="./images/fuzhuangfenlei.png" />
+</navigator>
+  <view class="word">
+    <text>上衣</text>
+  </view>
+</view>
+
+<view class="longskirt">
+<navigator url="/pages/category/longskirt/longskirt">
+  <image src="./images/qunzi.png" />
+</navigator>
+  <view class="word">
+    <text>长裙</text>
+  </view>
+</view>
+</view>
+
+<!-- 第二排分类 -->
+<view class="row01">
+<view class="coat">
+<navigator url="/pages/category/shortskirt/shortskirt">
+  <image src="./images/duanqun.png" />
+  </navigator>
+  <view class="word">
+    <text>短裙</text>
+  </view>
+</view>
+
+<view class="longskirt">
+<navigator url="/pages/category/kuzi/kuzi">
+  <image src="./images/kuzi.png" />
+  </navigator>
+  <view class="word">
+    <text>裤子</text>
+  </view>
+</view>
+</view>
+
+<!-- 第三排分类 -->
+<view class="row01">
+<view class="coat">
+<navigator url="/pages/category/baobao/baobao">
+  <image src="./images/baobao.png" />
+  </navigator>
+  <view class="word">
+    <text>包包</text>
+  </view>
+</view>
+
+<view class="longskirt">
+<navigator url="/pages/category/peijian/peijian">
+  <image src="./images/peijian.png" />
+</navigator>
+  <view class="word">
+    <text>配件</text>
+  </view>
+</view>
+</view>

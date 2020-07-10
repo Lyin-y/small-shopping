@@ -1,0 +1,24 @@
+<!--pages/kefu/kefu.wxml-->
+<view class="about">
+  <view class="about-tou">
+    <view class="about-img">
+      <image src="cloud://xly-oilad.786c-xly-oilad-1301571521/touxiang1.jpg" class="in-img"  model="scaleToFill"></image>
+    </view>
+    <view class="about-title">讲师：Lyin</view>
+  </view>
+
+  <view class="about-content">微信小程序-电商平台：适合经营电子商务平台移动端所需要</view>
+
+  <view class="about-addr">
+    <view class="about-tab">联系方式</view>
+    <view>地址: 广东省深圳市XXXX</view>
+    <view>联系电话：135-1234-xxxx</view>
+    <view>商务合作：xxxx@qq.com</view>
+    <view> 
+    <button  class='.tel' type="default" bindtap="calling">
+    <text>拨打客服电话</text>
+    </button> 
+    </view>
+  </view>
+</view>
+

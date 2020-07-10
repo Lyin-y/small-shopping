@@ -1,0 +1,25 @@
+<!--pages/login/login.wxml-->
+<view class="wrap">
+  <view class="logo">
+    <image src="/assets/images/logo.jpg"></image>
+    <text>welcome</text>
+  </view>
+  <view class="login">
+    <form bindsubmit="login">
+      <view class="username">
+        <label >用户名：</label>
+        <input type="text" placeholder="请输入用户名" name="username"></input>
+       
+      </view>
+       <view class="pwd">
+        <label>密码：</label>
+        <input type="password" placeholder="请输入密码"name="pwd"></input>
+        
+      </view>
+      <view class="errMsg" wx:if="{{showMsg}}">
+       <label>用户名或密码不能为空</label>
+      </view>
+      <button form-type="submit">登录</button>
+    </form>
+  </view>
+</view>

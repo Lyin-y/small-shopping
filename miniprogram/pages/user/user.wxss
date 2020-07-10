@@ -1,0 +1,70 @@
+/* pages/user/user.wxss */
+.container{
+  padding: 0rpx;
+  width: 100%;
+}
+.userinfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 240rpx;
+  background-color: pink;
+  margin-bottom: 10rpx;
+}
+.userinfo image{
+	width: 135rpx;
+	height: 135rpx;
+	/* margin: 20rpx; */
+	border-radius: 50%;
+}
+.userinfo-nickname{
+  color: #fff;
+  font-size: 40rpx;
+}
+.nav-list{
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  height: 160rpx;
+  flex-direction: row;
+  justify-content: space-between;
+  border-bottom: 1px solid gainsboro;
+ 
+}
+.menu{
+  width: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 25rpx 0rpx;
+}
+.menu image{
+  width: 60rpx;
+  height: 60rpx;
+}
+.info-list{
+  width: 100%;
+  margin-top: 30rpx;
+}
+.info-list .list{
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.list-item{
+  display: flex;
+  flex-direction: row;
+  justify-content:start;   /*x轴*/
+  align-items: center;    /*y轴*/
+  border-bottom:1px solid gainsboro;
+  margin-left: 25rpx;
+  padding-bottom: 20rpx;
+  padding-top: 20rpx;
+}
+.list-item image{
+  width: 60rpx;
+  height:60rpx;
+  margin-right: 15rpx;
+}

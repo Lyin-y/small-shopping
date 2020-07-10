@@ -1,0 +1,83 @@
+<!--pages/address/address.wxml-->
+<view style='background:#eee;'>
+ 
+  <!--pages/addr/addr.wxml-->
+  <scroll-view id='addrlist' scroll-y="true">
+    <block wx:for="{{addrlist}}" wx:key="addr">
+      <view class='list-item' wx:if="{{item.isDefault}}">
+        <view class='item-head'>
+          <text>{{item.name}}</text>
+          <text class='right'>18670321728</text>
+        </view>
+        <view class='item-desc'>
+          <text>{{item.province}}省{{item.city}}市{{item.area}}</text>
+          <text>{{item.street}}</text>
+          <text>{{item.desc}}</text>
+        </view>
+        <view class='item-edit'>
+          <view class='left chk-active'>
+            <switch type="checkbox" disabled checked />
+            <text class='ctr'>默认地址</text>
+          </view>
+          <view class='right'>
+            <text class='icon_edit' bindtap="navigateToEdit" data-id="{{item.id}}">编辑</text> -
+            <text class='icon_trash' bindtap="delAddr" data-id="{{item.id}}">删除</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+    <block wx:for="{{addrlist}}" wx:key="addr">
+      <view class='list-item' wx:if="{{item.isDefault==false}}">
+        <view class='item-head'>
+          <text>{{item.name}}</text>
+          <text class='right'>18670321728</text>
+        </view>
+        <view class='item-desc'>
+          <text>{{item.province}}省{{item.city}}市{{item.area}}</text>
+          <text>{{item.street}}</text>
+          <text>{{item.desc}}</text>
+        </view>
+        <view class='item-edit'>
+          <view class='left'>
+            <switch type="checkbox" bindchange="beDefault" data-id="{{item.id}}" checked="{{item.isDefault}}" />
+            <text class='ctr'>设为默认</text>
+          </view>
+          <view class='right'>
+            <text class='icon_edit' bindtap="navigateToEdit" data-id="{{item.id}}">编辑</text> -
+            <text class='icon_trash' bindtap="delAddr" data-id="{{item.id}}">删除</text>
+          </view>
+        </view>
+      </view>
+    </block>
+
+      <view class='list-item' >
+        <view class='item-head'>
+          <text>测试</text>
+          <text class='right'>18670321728</text>
+        </view>
+        <view class='item-desc'>
+          <text>广东省广州市白云区</text>
+          <text>马沥路118号</text>
+          <text>广东机电职业技术学院</text>
+        </view>
+        <view class='item-edit'>
+          <view class='left'>
+            <switch type="checkbox" bindchange="beDefault" data-id="1" checked="{{true}}" />
+            <text class='ctr'>设为默认</text>
+          </view>
+          <view class='right'>
+            <text  bindtap="navigateToEdit" data-id="1">编辑</text> -
+            <text  bindtap="delAddr" data-id="1">删除</text>
+          </view>
+        </view>
+      </view>
+
+      <view class='kongbai'></view>
+
+  </scroll-view>
+  <view id='add' bindtap='navigateToAdd'>
+    添加新地址
+  </view>
+</view>
+

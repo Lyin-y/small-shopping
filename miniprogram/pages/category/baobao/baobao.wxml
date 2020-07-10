@@ -1,0 +1,3 @@
+<!--pages/baobao/baobao.wxml-->
+<!-- src需要写入相对路径 不然不会生效 -->
+<include src="../coat/coat.wxml"/>

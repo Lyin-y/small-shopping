@@ -1,0 +1,25 @@
+<!--pages/user/user.wxml-->
+<view class="container">
+  <view class="userinfo" >
+  <!-- src="{{ userInfo.avatarUrl }}" {{ userInfo.nickName }} -->
+    <image class="userinfo-avatar" src="cloud://xly-oilad.786c-xly-oilad-1301571521/touxiang .jpg" background-size="cover"></image>
+    <text class="userinfo-nickname" bindtap="login">{{name}}</text>
+    <!-- <image class="userinfo-avatar" src="{{ userInfo.avatarUrl }}" background-size="cover"></image>
+		<text class="userinfo-nickname">{{ userInfo.nickName }}</text> -->
+  </view>
+  <view class="nav-list">
+  <view class="menu" wx:for="{{navList}}" wx:key="keys">
+      <image src="{{item.src}}" model="widthFix"></image>
+      <text>{{item.title}}</text>
+    </view> 
+  </view>
+  <view class="info-list">
+  <ul class="list">
+  <navigator class="list-item" url="/pages/collect/collect"><image src="cloud://xly-oilad.786c-xly-oilad-1301571521/navList/收藏.png"></image><li>我的收藏</li></navigator>
+  <navigator class="list-item" url="/pages/order/order"><image src="cloud://xly-oilad.786c-xly-oilad-1301571521/navList/iconfont-order.png"></image><li>我的订单</li></navigator>
+  <navigator class="list-item" url="/pages/address/address"><image src="cloud://xly-oilad.786c-xly-oilad-1301571521/navList/iconfont-addr.png"></image><li>收货地址</li></navigator>
+  <navigator class="list-item" url="/pages/kefu/kefu"><image src="cloud://xly-oilad.786c-xly-oilad-1301571521/navList/iconfont-kefu.png"></image><li>联系客服</li></navigator>
+
+  </ul>
+  </view>
+</view>

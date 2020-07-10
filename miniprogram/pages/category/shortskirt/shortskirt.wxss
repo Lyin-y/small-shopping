@@ -1,0 +1,2 @@
+/* pages/shortskirt/shortskirt.wxss */
+@import"../coat/coat.wxss";
